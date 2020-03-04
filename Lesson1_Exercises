@@ -91,6 +91,7 @@ print "\n"
 print "Car 2"
 print "Model:", car2[0]
 print "Range:", car2[2]
+# We can also use car2[-1] to index the last item in the list
 print "Colours:", car2[4]
 print "\n"
 
