@@ -1,0 +1,102 @@
+# DO NOT TOUCH
+# DO NOT TOUCH
+# vvvvvvvvvvvvv
+
+date1 = (2020, 4, 23)
+date2 = (2020, 4, 03)
+date3 = (2019, 8, 15)
+
+car1 = ["Tesla", {"width": 2.0, "length": 4}, 250, True, ("white","blue")]
+car2 = ["Ford",  {"width": 2.3, "length": 5}, 400, False, ("red","blue", "black")]
+car3 = ["Toyota",  {"width": 2.1, "length": 5}, 300, False, ("silver","red", "orange")]
+
+# ^^^^^^^^^^^^
+# DO NOT TOUCH
+# DO NOT TOUCH
+
+
+# Excercise A
+#   date1, date2 and date3 are tuples of dates.
+#   The tuples have the following structure;
+#   (<year>, <month>, <day>)
+#   
+#   We assume that every year is 365 days and every month is 30 days
+#   Print the difference in days between date1 and date2
+#   print the difference in days between date1 and date3
+#
+# The correct output should look as follows (either positive or negative):
+#   20
+#   253
+
+################ Start of Excercise A ###############################
+
+difference1 = ((date1[0]*365)+(date1[1]*30)+date1[2])-((date2[0]*365)+(date2[1]*30)+date2[2])
+print difference1
+
+difference2 = ((date1[0]*365)+(date1[1]*30)+date1[2])-((date3[0]*365)+(date3[1]*30)+date3[2])
+print difference2
+
+print "End of Excercise A\n\nA better way?!"
+
+date1_days = date1[2]
+date1_months = date1[1] * 30
+date1_years = date1[0] * 365
+
+date2_days = date2[2]
+date2_months = date2[1] * 30
+date2_years = date2[0] * 365
+
+date3_days = date3[2]
+date3_months = date3[1] * 30
+date3_years = date3[0] * 365
+
+difference1 = (date1_years+date1_months+date1_days)-(date2_years+date2_months+date2_days)
+print difference1
+
+difference2 = (date1_years+date1_months+date1_days)-(date3_years+date3_months+date3_days)
+print difference2
+
+print "\n\nExercise B"
+print "\n"
+
+################ End of Excercise A #################################
+
+
+
+# Excercise B
+#   car1, car2 and car3 are lists with information about cars.
+#   The list has the following structure;
+#   [<model>, {"width": <width>, "length": <length>}, <range>, <electric>, (<colour options>)]
+#   
+#   For car1, print the model, the width and whether it's an electric vehicle
+#   For car2, print the model, the range and it's colour options
+#   For car3, print the model, the surface area (width * length) and the red colour option
+#   
+# The correct output should look as follows:
+#   Tesla 2.0 True
+#   Ford 400 ('red', 'blue', 'black')
+#   Toyota 10.5 red
+################ Start of Excercise B ###############################
+
+car1 = ["Tesla", {"width": 2.0, "length": 4}, 250, True, ("white","blue")]
+car2 = ["Ford",  {"width": 2.3, "length": 5}, 400, False, ("red","blue", "black")]
+car3 = ["Toyota",  {"width": 2.1, "length": 5}, 300, False, ("silver","red", "orange")]
+
+print "Car 1"
+print "Model:", car1[0]
+print "Width:", car1[1]["width"]
+print "Electric?:", car1[3]
+print "\n"
+
+print "Car 2"
+print "Model:", car2[0]
+print "Range:", car2[2]
+print "Colours:", car2[4]
+print "\n"
+
+print "Car 3"
+print "Model:", car3[0]
+print "Surface Area:", car3[1]["width"] * car3[1]["length"]
+print "Colour:", car3[4][1]
+
+################ End of Excercise B #################################
